@@ -1,10 +1,11 @@
 import { Heading, Stack } from '@chakra-ui/react';
 import React from 'react';
+import Navigation from '../Header/Navigation';
 
 export default function HomePage() {
     return (
         <Stack>
-            <Heading>Yeah you know we that we up</Heading>
+            <Navigation />
         </Stack>
     )
 }
