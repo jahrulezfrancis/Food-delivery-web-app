@@ -3,7 +3,7 @@ import React from 'react'
 import FoodBG from "../../Components/Images/foodbg.png"
 
 
-const TwoBTN = () => {
+export const TwoBTN = () => {
     return (
         <HStack spacing='2em'>
             <Button bgColor='#FA4A0C' bgRepeat='no-repeat' objectFit='cover'>Playstore</Button>
@@ -22,8 +22,9 @@ export default function Introsec() {
                     Why stay hungry when <br />
                     you can order form Bella Onojie
                 </Heading>
-                <Text color='white' fontFamily='Montserrat' fontSize='1.5em' fontWeight={500} align='center'>Download the bella onoje’s food app now on</Text>
-<TwoBTN />
+                <Text color='white' fontFamily='Montserrat' fontSize='1.5em' fontWeight={500} align='center'>
+                    Download the bella onoje’s food app now on</Text>
+                <TwoBTN />
             </VStack>
         </Box>
     )
