@@ -12,7 +12,7 @@ import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs"
 
 function MockupTemp(props) {
     return (
-        <Flex direction={{ sm: 'column', md: 'column', lg: 'row' }} >
+        <Flex direction={{ base: 'column', md: 'column', lg: 'row' }} >
             <Image src={props.image} alt='' />
             <VStack justify='center' align='start' spacing='1em'>
                 <Text color='#FA4A0C'>{props.heading}</Text>
@@ -33,7 +33,7 @@ function MockupTemp(props) {
 const Footer = () => {
     return (
         <Box>
-            <HStack w='100%' justify='space-evenly' align='center' spacing='7em'>
+            <Flex direction={{ base: 'column', md: 'row', lg: 'row' }} w='100%' justify='space-evenly' align='center' pb='.5em' spacing='7em'>
                 <Image src={HeaderLogo} alt='footer logo' />
                 <HStack spacing='2em' color='#FA4A0C'>
                     <BsFacebook size='2em' />
@@ -41,7 +41,7 @@ const Footer = () => {
                     <BsInstagram size='2em' />
                 </HStack>
                 <Text>Copywright 2020 Designed by 7thWeb</Text>
-            </HStack>
+            </Flex>
         </Box>
     )
 }
@@ -49,8 +49,8 @@ const Footer = () => {
 
 const BottomSec = () => {
     return (
-        <Box bg='linear-gradient(0deg, rgba(37, 43, 66, 0.4), rgba(37, 43, 66, 0.4)), url(.jpg)' bgImage={BottomSecBG} 
-        bgRepeat='no-repeat' w='100%' height='auto' minH={'25em'}>
+        <Box bg='linear-gradient(0deg, rgba(37, 43, 66, 0.4), rgba(37, 43, 66, 0.4)), url(.jpg)' bgImage={BottomSecBG}
+            bgRepeat='no-repeat' w='100%' height='auto' minH={'25em'}>
             <VStack p={{ sm: '1em', md: '2em', lg: '10em' }} spacing='1.5em'>
                 <Heading textAlign='center' color='white'>
                     Download the app now
@@ -68,7 +68,8 @@ export default function AppMockUp() {
     return (
         <Box>
             <VStack>
-                <HStack mt={{sm:'-15em', md: '-15em', lg:'-17em'}} justify='center' spacing={{ sm: '-13em', md: '-15em', lg: '-15em' }}>
+                <HStack ml='0em' mt={{ base: '-5em', md: '-10em', lg: '-17em' }} justify='center' w='100%'
+                    align='center' spacing={{ base: '-16em', md: '-18em', lg: '-15em' }}>
                     <Image src={MobileMockRed} alt='' />
                     <Image src={MobileMockWhite} alt='' />
                 </HStack>
@@ -79,8 +80,8 @@ export default function AppMockUp() {
                 <MockupTemp image={MockSec1} heading='Create an account' lineone='Create/Login to an existing'
                     linetwo='account to get started' line2one='An account is created with your email' line2two='and a desired password' />
 
-                <Flex direction={{ sm: 'column', md: 'column', lg: 'row' }} p='2em'>
-                    <VStack justify='center' align='start' spacing='1em'>
+                <Flex direction={{ sm: 'column', md: 'column', lg: 'row' }} p='2em' flexWrap='wrap'>
+                    <VStack justify='center' align='center' spacing='1em'>
                         <Text color='#FA4A0C'>Explore Varieties</Text>
                         <Heading fontFamily='Montserrat' color='#252B42'>
                             Shop for your favorites <br />
