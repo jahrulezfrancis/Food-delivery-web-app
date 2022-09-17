@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, VStack, HStack, Text, Center, Divider, Image } from '@chakra-ui/react';
+import { Box, Flex, Heading, VStack, HStack, Text, Center, Divider, Image, Stack } from '@chakra-ui/react';
 import React from 'react';
 import MobileMockRed from "../../Components/Images/mobile-mockup-red.png"
 import MobileMockWhite from "../../Components/Images/mobile-mockup-white.png"
@@ -10,24 +10,24 @@ import HeaderLogo from "../../Components/Images/header-logo.png"
 import BottomSecBG from "../../Components/Images/bottom-sec-bg.png"
 import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs"
 
-    function MockupTemp(props) {
-        return (
-            <Flex direction={{ sm: 'column', md: 'column', lg: 'row' }}>
-                <Image src={props.image} alt='' />
-                <VStack justify='center' align='start' spacing='1em'>
-                    <Text color='#FA4A0C'>{props.heading}</Text>
-                    <Heading fontFamily='Montserrat' color='#252B42'>
-                        {props.lineone} <br />
-                        {props.linetwo}
-                    </Heading>
-                    <Text fontFamily='Montserrat' color='#737373'>
-                        {props.line2one} <br />
-                        {props.line2two}
-                    </Text>
-                </VStack>
-            </Flex>
-        )
-    }
+function MockupTemp(props) {
+    return (
+        <Flex direction={{ sm: 'column', md: 'column', lg: 'row' }} >
+            <Image src={props.image} alt='' />
+            <VStack justify='center' align='start' spacing='1em'>
+                <Text color='#FA4A0C'>{props.heading}</Text>
+                <Heading fontFamily='Montserrat' color='#252B42'>
+                    {props.lineone} <br />
+                    {props.linetwo}
+                </Heading>
+                <Text fontFamily='Montserrat' color='#737373'>
+                    {props.line2one} <br />
+                    {props.line2two}
+                </Text>
+            </VStack>
+        </Flex>
+    )
+}
 
 
 const Footer = () => {
@@ -78,7 +78,7 @@ export default function AppMockUp() {
                 <MockupTemp image={MockSec1} heading='Create an account' lineone='Create/Login to an existing'
                     linetwo='account to get started' line2one='An account is created with your email' line2two='and a desired password' />
 
-                <Flex direction={{ sm: 'column', md: 'column', lg: 'row' }}>
+                <Flex direction={{ sm: 'column', md: 'column', lg: 'row' }} p='2em'>
                     <VStack justify='center' align='start' spacing='1em'>
                         <Text color='#FA4A0C'>Explore Varieties</Text>
                         <Heading fontFamily='Montserrat' color='#252B42'>
