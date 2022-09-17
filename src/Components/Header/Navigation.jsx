@@ -12,7 +12,7 @@ import MobileLogo from "../../Components/Images/mobile-header-logo.png"
 export default function () {
 
     return (
-        <Box display={{ sm: 'none', md: 'none', lg: 'block' }}>
+        <Box display={{ base: 'none', md: 'none', lg: 'block' }}>
             <UnorderedList listStyleType='none'>
                 <HStack spacing='2em' align='center' mr='2em'>
                     <NavLink to='/' >
@@ -40,7 +40,7 @@ export default function () {
 
 export function MobileMenu() {
     return (
-        <Box w='100%' display={{ sm: 'block', md: 'block', lg: 'none' }}>
+        <Box w='100%' display={{  base: 'block', md: 'block', lg: 'none' }}>
             <HStack w='100%'>
                 <Menu>
                     <MenuButton
@@ -72,7 +72,7 @@ export function MobileMenu() {
                         </MenuItem>
                     </MenuList>
                 </Menu>
-                <Stack align='end' justify='center' w='100%' p='.5em'>
+                <Stack align='flex-end' justify='center' w='100%'>
                     <NavLink>
                         <Image src={MobileLogo} alt='header logo' />
                     </NavLink>
