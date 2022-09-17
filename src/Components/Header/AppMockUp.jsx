@@ -49,7 +49,8 @@ const Footer = () => {
 
 const BottomSec = () => {
     return (
-        <Box bg='linear-gradient(0deg, rgba(37, 43, 66, 0.4), rgba(37, 43, 66, 0.4)), url(.jpg)' bgImage={BottomSecBG} bgRepeat='no-repeat' w='100%' height='auto' minH={'25em'}>
+        <Box bg='linear-gradient(0deg, rgba(37, 43, 66, 0.4), rgba(37, 43, 66, 0.4)), url(.jpg)' bgImage={BottomSecBG} 
+        bgRepeat='no-repeat' w='100%' height='auto' minH={'25em'}>
             <VStack p={{ sm: '1em', md: '2em', lg: '10em' }} spacing='1.5em'>
                 <Heading textAlign='center' color='white'>
                     Download the app now
@@ -67,7 +68,7 @@ export default function AppMockUp() {
     return (
         <Box>
             <VStack>
-                <HStack mt='-17em' justify='center' spacing={{ sm: '-10em', md: '-10em', lg: '-15em' }}>
+                <HStack mt={{sm:'-15em', md: '-15em', lg:'-17em'}} justify='center' spacing={{ sm: '-13em', md: '-15em', lg: '-15em' }}>
                     <Image src={MobileMockRed} alt='' />
                     <Image src={MobileMockWhite} alt='' />
                 </HStack>
