@@ -7,8 +7,18 @@ export const TwoBTN = () => {
     const [isLargerThan1280] = useMediaQuery('(max-width: 500px)')
     return (
         <Flex direction={isLargerThan1280 ? 'column' : 'row'} m='1em' spacing='2em'>
-            <Button m='1em' bgColor='#FA4A0C' bgRepeat='no-repeat' objectFit='cover'>Playstore</Button>
-            <Button m='1em'>App Store</Button>
+            <Button w='10em' h='3em' m='1em' color='white' bgColor='#FA4A0C' bgRepeat='no-repeat' objectFit='cover' borderRadius='1em'>Playstore</Button>
+            <Button w='10em' h='3em' m='1em' color='white' variant='outline' bg='transparent' borderRadius='1em'>App Store</Button>
+        </Flex>
+    )
+}
+
+export const TwoBTNhead = () => {
+    const [isLargerThan1280] = useMediaQuery('(max-width: 500px)')
+    return (
+        <Flex direction={isLargerThan1280 ? 'column' : 'row'} m='1em' spacing='2em'>
+            <Button w='10em' h='3em' m='1em' color='white' bgColor='#FA4A0C' bgRepeat='no-repeat' objectFit='cover' borderRadius='1em'>Playstore</Button>
+            <Button w='10em' h='3em' m='1em' color='#FA4A0C' variant='outline' bg='transparent' borderRadius='1em'>App Store</Button>
         </Flex>
     )
 }
@@ -26,7 +36,7 @@ export default function Introsec() {
                 </Heading>
                 <Text color={isLargerThan1280 ? '#737373' : 'white'} fontFamily='Montserrat' fontSize='1.5em' fontWeight={500} align='center'>
                     Download the bella onoje’s food app now on</Text>
-                <TwoBTN />
+                <TwoBTNhead />
             </VStack>
         </Box>
     )
