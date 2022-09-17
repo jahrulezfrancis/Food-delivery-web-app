@@ -15,8 +15,8 @@ function MockupTemp(props) {
 
     return (
         <Flex direction={isLargerThan1280 ? 'column' : 'row'}
-            justify={isLargerThan1280 ? 'center' : 'start'} align='center'>
-            <Stack p='0em' bg='green' justifyContent='center'>
+            justify={isLargerThan1280 ? 'center' : 'start'} align='center' flexWrap='wrap' flex={1}>
+            <Stack p='0em' justifyContent='center' align='center'>
                 <Image src={props.image} alt='' justifyContent='center' />
             </Stack>
             <VStack justify={isLargerThan1280 ? 'start' : 'center'} align={isLargerThan1280 ? 'center' : 'start'} spacing='1em'>
@@ -36,10 +36,14 @@ function MockupTemp(props) {
 
 
 const Footer = () => {
+    const [isLargerThan1280] = useMediaQuery('(max-width: 500px)')
+
     return (
         <Box>
             <Flex direction={{ base: 'column', md: 'row', lg: 'row' }} w='100%' justify='space-evenly' align='center' pb='.5em' spacing='7em'>
-                <Image src={HeaderLogo} alt='footer logo' />
+                <Box display={isLargerThan1280 ? 'none' : 'block'}>
+                    <Image src={HeaderLogo} alt='footer logo' />
+                </Box>
                 <HStack spacing='2em' color='#FA4A0C' p='2em'>
                     <BsFacebook size='2em' />
                     <BsTwitter size='2em' />
@@ -56,9 +60,9 @@ const BottomSec = () => {
     const [isLargerThan1280] = useMediaQuery('(max-width: 500px)')
 
     return (
-        <Box bgColor={ isLargerThan1280 ? '#252B42' : 'linear-gradient(0deg, rgba(37, 43, 66, 0.4), rgba(37, 43, 66, 0.4)), url(.jpg)'} bgImage={ isLargerThan1280 ? undefined : BottomSecBG}
+        <Box bgColor={isLargerThan1280 ? '#252B42' : 'linear-gradient(0deg, rgba(37, 43, 66, 0.4), rgba(37, 43, 66, 0.4)), url(.jpg)'} bgImage={isLargerThan1280 ? undefined : BottomSecBG}
             bgRepeat='no-repeat' w='100%' height='auto' minH={'25em'}>
-            <VStack p={ isLargerThan1280 ? '1em' : '10em' } spacing='1.5em' align='center' justify='center'>
+            <VStack p={isLargerThan1280 ? '1em' : '10em'} spacing='1.5em' align='center' justify='center'>
                 <Heading textAlign='center' color='white'>
                     Download the app now
                 </Heading>
@@ -72,15 +76,15 @@ const BottomSec = () => {
 }
 
 export default function AppMockUp() {
-    const [isLargerThan1280] = useMediaQuery('(max-width: 500px)')
+    const [isLargerThan1280] = useMediaQuery('(max-width: 550px)')
 
     return (
         <Box>
             <VStack align='center' w='100%'>
-                <HStack ml='0em' mt={isLargerThan1280 ? '1em' : '-15em'} justify='center' w='100%'
+                <HStack ml='0em' mt={isLargerThan1280 ? '1em' : '-14em'} justify='center' w='100%'
                     align='center' spacing={isLargerThan1280 ? '-10em' : '-18em'}>
-                    <Image src={MobileMockRed} alt='' ml='-1em' p='-10em'/>
-                    <Image src={MobileMockWhite} alt='' boxSize={ isLargerThan1280 ? '20em' : 'auto' } />
+                    <Image src={MobileMockRed} alt='' ml='-1em' p='-10em' />
+                    <Image src={MobileMockWhite} alt='' boxSize={isLargerThan1280 ? '20em' : 'auto'} />
                 </HStack>
                 <Center w='60%'>
                     <Divider orientation='horizontal' size='80%' />
